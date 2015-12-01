@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="resources/lib/jquery.2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/globalConfig.js"></script>
+<script type="text/javascript" src="resources/js/dialog.js"></script>
+<script type="text/javascript" src="resources/js/jquery.md5.js"></script>
+<script type="text/javascript" src="resources/js/public.js"></script>
+<script type="text/javascript">
+$(function(){	
+	$("#logout a").click(function(){
+		logout();
+	})
+	var info = getLoginInfo();
+	if(info){
+		var name = '';
+		if(info.companyName){
+			name += info.companyName +' > ';
+		}
+		if(info.userName){
+			name+=info.userName;
+		}
+		$("#userInfo").text(name);
+	}
+	
+})	
+</script>
+
+
+</head>
+
+<body style="background:#34b3e9 ;">
+<div class="topleft">
+    <a href="main.html" target="_parent"><img src="resources/images/logo.png" title="系统首页" /></a>
+</div>
+    <ul class="nav">
+    </ul>
+<div class="topright">    
+    <ul>
+    	<li id="logout"><a href="javascript:void(0)" target="_parent">退出</a></li>
+    </ul>
+    <div class="user">
+    	<span id="userInfo"></span>
+    </div>    
+</div>
+</body>
+</html>

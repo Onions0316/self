@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/select.css" rel="stylesheet" type="text/css" />
+<link href="resources/load/load.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/SimpleTree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="resources/lib/jquery.2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/SimpleTree.js"></script>
+<script type="text/javascript" src="resources/js/globalConfig.js"></script>
+<script type="text/javascript" src="resources/js/dialog.js"></script>
+<script type="text/javascript" src="resources/js/public.js"></script>
+<script language="JavaScript" src="resources/js/menu.js"></script>
+<script type="text/javascript">
+$(function(){	
+	$('.menu').click(function(){
+		var frameid = parent.document.getElementById("rightFrame");  
+		frameid.src=$(this).attr("url")
+	});
+})
+</script>
+</head>
+<body style="background:#f0f9fd;">
+	<div class="lefttop"><span></span>微信名片</div>
+    <div class="menu" url="cardList.html"><span class="txt">名片列表</span></div>
+</body>
+</html>

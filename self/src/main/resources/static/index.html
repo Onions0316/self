@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="resources/lib/jquery.2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/globalConfig.js"></script>
+<script type="text/javascript" src="resources/js/dialog.js"></script>
+<script type="text/javascript" src="resources/js/public.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var loginTime = getInfo(loginTimeKey);
+		if(loginTime){
+			$('#loginTime').text(getInfo(loginTimeKey));	
+		}else{
+			goLogin();
+		}
+	})
+</script>
+</head>
+<body>
+ <div class="place">
+    <span>位置：</span>
+	    <ul class="placeul">
+	    	<li><a href="#">首页</a></li>
+	    </ul>
+</div>
+<div class="mainindex">
+    <div class="welinfo">
+	    <span><img src="resources/images/sun.png" alt="天气" /></span>
+	    <b><label id="userName"></label>   你好，欢迎使用管理系统</b>
+    </div>
+    <div class="welinfo">
+	    <span><img src="resources/images/time.png" alt="时间" /></span>
+	    <i>您本次登录的时间：<label id="loginTime"></label></i> 
+    </div>
+</div>
+</body>
+</html>

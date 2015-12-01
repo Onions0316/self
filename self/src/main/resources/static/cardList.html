@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/select.css" rel="stylesheet" type="text/css" />
+<link href="resources/load/load.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="resources/lib/jquery.2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/globalConfig.js"></script>
+<script type="text/javascript" src="resources/js/mytable.js"></script>
+<script type="text/javascript" src="resources/js/select-ui.min.js"></script>
+<script type="text/javascript" src="resources/lhgdialog/lhgdialog.min.js"></script>
+<script type="text/javascript" src="resources/js/dialog.js"></script>
+<script type="text/javascript" src="resources/load/load.js"></script>
+<script type="text/javascript" src="resources/js/jquery.md5.js"></script>
+<script type="text/javascript" src="resources/js/public.js"></script>
+<script type="text/javascript" src="resources/js/cardList.js"></script>
+</head>
+<body>
+ <div class="place">
+    <span>位置：</span>
+	    <ul class="placeul">
+			<li><a href="index.html">首页</a></li>
+	    	<li><a href="#">名片列表</a></li>
+	    </ul>
+</div>
+	<div class="rightinfo">
+		<div class="tools">
+			<form id="search">
+				<ul class="seachform">
+					<li><label>所属公司</label>
+						<div class="vocation" id="companyIdDiv">
+							<select class="select2" name="companyId" id="companyId">
+								<option>正在加载中...</option>
+							</select>
+						</div></li>
+					<li><label>排序类型</label>
+						<div class="vocation">
+							<select class="select2" name="order" id="order">
+								<option>正在加载中...</option>	
+							</select>
+						</div></li>
+					<li><label>&nbsp;</label><input id="searchbut" type="button"
+						class="scbtn" value="查询" /></li>
+					<li><label>&nbsp;</label><input id="export" type="button"
+						class="scbtn" value="导出" /><a id="exportUrl" style="display:none"></a></li>
+				</ul>
+			</form>
+		</div>
+		<div id="tablediv"></div>
+		<div class="pagin"></div>
+	</div>
+	<script type="text/javascript">
+		$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+</div>
+</body>
+</html>
